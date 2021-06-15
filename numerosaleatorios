@@ -1,0 +1,19 @@
+import random
+print("BIENVENIDO AL JUEGO DE LOS DADOS")
+print("TIRE EL DADO POR FAVOR")
+dado=int(input())
+numero=0
+contador=0
+
+def tirarDado(dado, random, contador):
+    if dado==0:
+        print("¡Imposible!")
+        exit()
+    else:
+        print("Tirada de dados= ", dado)
+        while(contador!=dado):
+            numero = random.randint(1, dado)
+            contador+=1
+            print(numero)
+
+tirarDado(dado,random,contador)
